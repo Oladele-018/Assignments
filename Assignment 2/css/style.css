@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'system-ui', sans-serif;
+    transition: .3s;
+}
+
+.header-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1552083375-1447ce886485?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTEwNzJ8MHwxfHNlYXJjaHwxMXx8QmFja2dyb3VuZCUyMHdhbGxwYXBlcnxlbnwwfHx8fDE2OTI2MDk3OTN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.brand::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content{
+    z-index: 5;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: grid
+}
+
+.logo{
+    font-size: 450%;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: auto;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.sub-line{
+    color: #fff;
+    padding: 20px 0 30px;
+    font-size: 20px;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    position: relative;
+    font-weight: 300;
+}
+
+.sub-line::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: #fff;
+}
+
+.sub-line::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.search-box{
+    display: block;
+    margin: 60px auto 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.search-btn{
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #0a1113;
+    color: #fff;
+}
+
+.search-btn:hover{
+    background: #fff;
+    color: #0a1113;
+}
+
+.gallery{
+    width: 100%;
+    padding: 40px;
+    background: #fff;
+    columns: 5;
+    column-gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .gallery{
+        columns: 3;
+    }
+}
+
+@media (max-width: 415px) {
+    .gallery{
+        columns: 1;
+    }
+}
+
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
